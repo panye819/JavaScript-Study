@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var box = function() {
+		return 'Lee';
+		
+	};
+	//alert(box);
+	//第一个圆括号放匿名函数，第二个圆括号执行。
+	(function() {
+		alert('Lee');
+	})();
+	(function(age) {
+		alert(age);
+	})(100);
+
+	</script>
+</body>
+</html>
