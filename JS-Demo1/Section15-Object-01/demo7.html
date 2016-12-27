@@ -15,12 +15,17 @@ JavaScript 很容易学习。</p>
 <script>
 	var img = document.createElement('img');
 	var h1 = document.getElementsByTagName('h1')[0];
-	img.src = "fm201601.png";
+	img.src = "csdn.jpg";
 	
 	setTimeout(function() {
-		document.body.insertBefore(h1, img);
-	}, 5000);
+		//document.body.insertBefore(img, h1);
+		//document.body.insertBefore(img, h1);
+		document.body.insertBefore(img,h1);
+	}, 1000);
 	
+    setTimeout(function(){
+        img.parentNode.removeChild(img);
+    },5000);
 </script>
 </body>
 </html>
