@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+     /*
+     * 变量问题：
+     *  根据作用范围，变量可以分为局部变量和成员变量（全局变量）
+     *  局部变量：只有局部可以访问的变量
+     *          函数外部用var定义的变量
+     *  成员变量：（全局变量）在哪里都可以访问的变量
+     *          函数外部或者进入js之后立即定义的变量和函数内部不带有var的变量
+     *  JS中没有块级作用域
+     *
+     *
+     * */
+    var num3 = 333;
+    function fn() {
+        //var num1 = 111;
+        num2 = 222;
+//        console.log(num2);
+        console.log(num3);
+
+    }
+
+    fn();
+     //console.log(num1);
+     console.log(num2);
+     console.log(num3);
+
+    </script>
+
+</body>
+</html>s
