@@ -4,6 +4,7 @@
     <extensionMap>
       <mapping pattern="笔记" type="PLAIN_TEXT" />
       <mapping pattern="测试用例" type="PLAIN_TEXT" />
+      <mapping pattern="jQuery笔记" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
