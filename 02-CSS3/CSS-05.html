@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+
+        <!--鼠标移动进入的动作-->
+        img:hover{
+            background: magenta;
+            border-radius: 256px;
+            width: 100px;
+        }
+
+        .username:focus{
+            background: green;
+            outline-color: red;
+        }
+        p::selection{
+          background: indianred;
+        }
+    </style>
+</head>
+<body>
+    <img src="demo.ico" alt="">
+    <form action="">
+        <p>用户名：</p>
+        <p><input type="text" class="username"></p>
+        <p><input type="submit" value="OK"></p>
+    </form>
+    <p>To seek a dream?
+        Just to pole a boat upstream
+        To where the green grass is more verdant;
+        Or to have the boat fully loaded with starlight
+        And sing aloud in the splendor of starlight
+    </p>
+
+</body>
+</html>

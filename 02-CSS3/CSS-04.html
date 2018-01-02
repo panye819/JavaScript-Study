@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+    <style>
+        /*所有子元素h1*/
+       .div1 h1{
+           background: #ccc;
+       }
+       /*子元素h1*/
+       .div1>h1{
+           background: #00ffff;
+       }
+        /*子元素h1*/
+       .div1+h1{
+           background: #003344;
+           font-size: 30px;
+       }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>bbbbbbbbbbbbbbbbbbbbbbbbb</h1>
+        <h1>bbbbbbbbbbbbbbbbbbbbbbbbb</h1>
+        <div class="div11">
+            <div class="div111">
+                <h1>aaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+                <h1>aaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+            </div>
+        </div>
+    </div>
+    <h1>ccccccccccccccccccccccccc</h1>
+    <h1>ccccccccccccccccccccccccc</h1>
+</body>
+</html>

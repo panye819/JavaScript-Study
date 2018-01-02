@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <style>
+        img:first-child{
+           background: #ccc;
+            border-radius: 256px;
+            width: 100px;
+        }
+        img:last-child{
+            background: #ccc;
+            border-radius: 256px;
+            width: 100px;
+        }
+        img:nth-child(2){
+            background: #ccc;
+            border-radius: 256px;
+            width: 100px;
+        }
+        h2{
+            font-size: 50px;
+            margin-left: 40px;
+        }
+        p:first-letter{
+            font-size: 50px;
+            margin-left: 40px;
+        }
+        p:first-line{
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="img">
+    <img src="demo.ico" class="imgcls">
+    <img src="demo.ico" class="imgcls">
+    <img src="demo.ico" class="imgcls">
+    <img src="demo.ico" class="imgcls">
+</div>
+
+<div id="text">
+    <h2>Linux学习</h2>
+    <p>Linux is very useful!!!
+        Linux is very useful!!!
+        Linux is very useful!!!
+        Linux is very useful!!!
+        Linux is very useful!!!
+        Linux is very useful!!!
+        Linux is very useful!!!Linux is very useful!!!Linux is very useful!!!
+        Linux is very useful!!!
+    </p>
+</div>
+
+</body>
+</html>
