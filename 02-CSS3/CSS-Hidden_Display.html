@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS显示与隐藏</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .line1 {
+            display: none;
+
+        }
+        .line2{
+            visibility: visible;
+        }
+        .line3{
+            visibility: hidden;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<!--<h1 class="line1">aaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>-->
+<!--<h1 class="line2">bbbbbbbbbbbbbbbbbbbbbbbbbbb</h1>-->
+<!--<h1 class="line3">ccccccccccccccccccccccccccc</h1>-->
+<!--<h1 class="line4">ddddddddddddddddddddddddddd</h1>-->
+<span class="line1">aaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+<span class="line2">bbbbbbbbbbbbbbbbbbbbbbbbbbb</span>
+<span class="line3">ccccccccccccccccccccccccccc</span>
+<span class="line4">ddddddddddddddddddddddddddd</span>
+<button>显示1</button>
+<button>显示2</button>
+<button>显示3</button>
+</body>
+<script>
+    $('button').eq(0).click(function () {
+        $('.line1').css({'display': 'inline'});
+        // $('.line1').css({'display': 'block'});
+
+    })
+</script>
+</html>
