@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS2D旋转</title>
+    <style>
+        div{
+            width: 224px;
+            height: 224px;
+            background: #cccccc;
+            /*transform: translate(100px,100px);*/
+            /*transform: rotate(30deg);*/
+            /*border-radius: 128px;*/
+            border: 5px solid red;
+            /*transform: rotate(30deg) translate(500px, 100px);*/
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <img src="bag.jpg" alt="">
+    </div>
+</body>
+<script>
+    $('div').click(function () {
+        s=0;
+        v=10;
+        obj=$(this);
+        setInterval(function () {
+            s+=v;
+            obj.css({'transform':'rotate(20deg) translate('+s+'px,0)'})
+        },100);
+    })
+
+</script>
+
+</html>

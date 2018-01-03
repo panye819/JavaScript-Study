@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS背景</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background: #ccc;
+            border: 10px solid #f0f;
+            padding: 10px;
+            background: url("demo.ico"), url("collect.png") no-repeat;
+            background-size: 100%;
+            /*background-origin: content-box;*/
+            /*background-origin: padding-box;*/
+            background-origin: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <p>Linux is very useful!</p>
+    <p>Linux is very useful!</p>
+    <p>Linux is very useful!</p>
+    <p>Linux is very useful!</p>
+</div>
+</body>
+
+</html>
