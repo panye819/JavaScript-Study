@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+</head>
+<body>
+<div class="img">
+    <h1>aaaaaaaaaaaaaaa</h1>
+    <h1>bbbbbbbbbbbbbbb</h1>
+</div>
+</body>
+<script>
+    //全局变量
+    // str='user1';
+
+    function say() {
+        // str='user2'
+        //局部变量
+        var str='user2'
+    }
+    say();
+    alert(str)
+
+</script>
+</html>
