@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS弹力球</title>
+    <style>
+        #imgid{
+            width: 128px;
+            height: 128px;
+            position: absolute;
+            top:0;
+            left: 0;
+            /*overflow: hidden;*/
+            /*border: 1px solid lime;*/
+
+        }
+        #imgid img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="imgid">
+    <img src="ball.png" alt="">
+</div>
+
+<br>
+</body>
+<script>
+    //JS特效
+    imgobj=document.getElementById('imgid');
+    screenHeight=document.documentElement.clientHeight;
+    screenWidth=document.documentElement.clientWidth;
+    // alert(screenHeight);
+    imgHeight=128;
+    imgWidth=128;
+    diffHeight=screenHeight-imgHeight;
+    diffWidth=screenWidth-imgWidth;
+    //事件触发
+    xs=0;
+    xv=10;
+    ys=0;
+    yv=20;
+    setInterval(function () {
+            ys+=yv;
+        if (ys>=diffHeight){
+            ys=diffHeight;
+            yv=-yv;
+        }
+        if(ys<=0){
+            yv=-yv;
+        }
+        imgobj.style.top=ys+'px';
+    },10);
+    setInterval(function () {
+        xs+=xv;
+        if (xs>=diffWidth){
+            xs=diffWidth;
+            xv=-xv;
+        }
+        if(xs<=0){
+            xv=-xv;
+        }
+        imgobj.style.left=xs+'px';
+    },10);
+</script>
+</html>

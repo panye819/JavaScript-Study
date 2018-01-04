@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS表单事件</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form action="" id="fid">
+    <p>用户名：</p>
+    <p><input type="text" id="ipt" value="castle"></p>
+    <p>密码：</p>
+    <p><input type="text"></p>
+    <p><input type="submit" value="OK"></p>
+    <select id="s1">
+        <option value="选择城市">选择城市</option>
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="南京">南京</option>
+    </select>
+    <h3>请确认您选择的城市：<span id="s2">太原</span></h3>
+</form>
+</body>
+<script>
+    iptobj=document.getElementById('ipt');
+    // iptobj.onfocus=function (ev) {
+    //     this.style.outlineColor='blue';
+    //     // this.value='';
+    //     this.select();
+    // };
+    // iptobj.onblur=function (ev) {
+    //     val=this.value;
+    //     if(val.length<6){
+    //         alert('用户名不能少于6位！')
+    //     }
+    // };
+    iptobj.onselect=function (ev) {
+        this.value='user1';
+    }
+    s1obj=document.getElementById('s1');
+    s2obj=document.getElementById('s2');
+    s1obj.onchange=function (ev) {
+        s1val=this.value;
+        s2obj.innerHTML=s1val;
+    }
+    fidobj=document.getElementById('fid');
+    fidobj.onsubmit=function (ev) {
+        alert(1);
+    }
+
+</script>
+</html>
