@@ -22,36 +22,55 @@
 <div class="clock">
     <span id="sid"></span>
 </div>
+<br>
+<button id="bid">停止</button>
+<button id="bid2">开始</button>
 </body>
 <script>
     function getDate() {
-        dobj = new Date();
-        year=dobj.getFullYear();
-        month=dobj.getMonth()+1;
-        day=dobj.getDate();
-        hour=dobj.getHours();
+        var dobj = new Date();
+        // var year=dobj.getFullYear();
+        // var month=dobj.getMonth()+1;
+        // var day=dobj.getDate();
+        var hour=dobj.getHours();
         if(hour<10){
             hour='0'+hour;
         }
-        minute=dobj.getMinutes();
+        var  minute=dobj.getMinutes();
         if(minute<10){
             minute='0'+minute;
         }
-        second=dobj.getSeconds();
+        var second=dobj.getSeconds();
         if(second<10){
             second='0'+second;
         }
         // str=year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second;
-        str=hour+":"+minute+":"+second;
+        var str=hour+":"+minute+":"+second;
         // alert(str);
-        sidobj=document.getElementById('sid');
+        var sidobj=document.getElementById('sid');
         sidobj.innerHTML=str;
     }
     getDate();
-    setInterval(function () {
-        getDate();
-    },1000);
 
+    start();
+    //启动计时器
+    function start() {
+        sobj=setInterval(getDate,1000);
+    }
+    //停止计时器
+    function stop() {
+        clearInterval(sobj);
+    }
+    //清除定时器
+    bidobj=document.getElementById('bid');
+    bidobj.onclick=function () {
+        stop();
+    };
+    // 重新开始计时
+    bid2obj=document.getElementById('bid2');
+    bid2obj.onclick=function () {
+        start();
+    }
 
 
 </script>

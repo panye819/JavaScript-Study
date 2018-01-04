@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <style>
+        .clock{
+            width: 350px;
+            height: 50px;
+            background: #000;
+            color:#0f0;
+            font-weight: bold;
+            border-radius: 50px ;
+            text-align: center;
+            line-height: 50px;
+            /*font-size: 10px;*/
+        }
+    </style>
+</head>
+<body>
+<!--<h1>日期对象...</h1>-->
+<div class="clock">
+    <span>提交成功，<span id="sid">6</span>秒后页面即将跳转到百度。。。</span>
+</div>
+<button id="bid">立即停止！</button>
+<br>
+
+</body>
+<script>
+    bidobj=document.getElementById('bid');
+    tobj=setTimeout(function () {
+        location='https://www.baidu.com';
+    },6000);
+    bidobj.onclick=function () {
+        clearTimeout(tobj);
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS字符串</title>
+    <style>
+        .clock{
+            width: 350px;
+            height: 50px;
+            background: #000;
+            color:#0f0;
+            font-weight: bold;
+            border-radius: 50px ;
+            text-align: center;
+            line-height: 50px;
+            /*font-size: 10px;*/
+        }
+    </style>
+</head>
+<body>
+<!--<h1>日期对象...</h1>-->
+<div class="clock">
+    <span>提交成功，<span id="sid">6</span>秒后页面即将跳转到百度。。。</span>
+</div>
+<br>
+
+</body>
+<script>
+    str='/web/home/index.php';
+    str2='index.php';
+    alert(str.indexOf('o'));
+    alert(str.lastIndexOf('e'));
+    alert(str.length);
+    alert(str.substr(5,4));
+    pos=str.lastIndexOf('/');
+    dir=str.substr(0,pos);
+    filename=str.substr(pos+1);
+    alert("文件所在目录是："+dir);
+    alert("文件名是："+filename);
+    pos2=str.lastIndexOf('.');
+    ext=str.substr(pos2+1);
+    alert("文件后缀是："+ext);
+    ext2=str2.split('.');
+    alert("文件后缀是："+ext2[1]);
+    str3='/web/home/index.HOME.php';
+    arr=str3.match(/home/ig);
+    alert(arr);
+    //replace不改变原字符串，而是产生一个新的字符串对象
+    str4=str3.replace(/home/ig,'castle');
+    alert(str4);
+
+</script>
+</html>
