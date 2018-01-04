@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS键盘事件keyup</title>
+    <style>
+        img{
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top:0;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>用户名：</p>
+        <p><input type="text"></p>
+        <p>密码：</p>
+        <p><input type="text"></p>
+        <p>验证码：</p>
+        <p><input type="text" id="verify"></p>
+        <p><input type="submit" value="OK"></p>
+
+    </form>
+</body>
+<script>
+    vobj=document.getElementById('verify');
+    i=0;
+
+    vobj.onkeyup=function (ev) {
+        var val=this.value;
+        val2=val.toUpperCase();
+        this.value=val2;
+        // if (i<10){
+        //     i++;
+        //     alert(val.toUpperCase());
+        // }else{
+        //     alert("Too many Tries!!!")
+        //
+        // }
+
+    }
+
+</script>
+</html>

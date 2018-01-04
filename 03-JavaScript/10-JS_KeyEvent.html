@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS键盘事件keydown</title>
+    <style>
+        img{
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top:0;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="soldier.png" id="imgid">
+<br>
+</body>
+<script>
+    //JS特效
+    //找到对象
+    imgobj=document.getElementById('imgid');
+    //事件触发
+    xs=0;
+    xv=20;
+
+    ys=0;
+    yv=20;
+    document.onkeydown=function (event) {
+        kc=event.keyCode;
+        document.title=kc;
+        switch (kc){
+            case 37:
+                xs-=xv;
+                imgobj.style.left=xs+'px';
+                break;
+            case 38:
+                ys-=yv;
+                imgobj.style.top=ys+'px';
+                break;
+            case 39:
+                xs+=xv;
+                imgobj.style.left=xs+'px';
+                break;
+            case 40:
+                ys+=yv;
+                imgobj.style.top=ys+'px';
+                break;
+
+        }
+    }
+
+</script>
+</html>
