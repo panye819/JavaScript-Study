@@ -8,12 +8,13 @@
     </style>
 </head>
 <body>
-<form action="" id="fid">
+<form action="go.php" id="fid">
     <p>用户名：</p>
     <p><input type="text" id="ipt" value="castle"></p>
     <p>密码：</p>
-    <p><input type="text"></p>
+    <p><input type="text" value="123456"></p>
     <p><input type="submit" value="OK"></p>
+    <p><input type="reset" value="Cancel"></p>
     <select id="s1">
         <option value="选择城市">选择城市</option>
         <option value="北京">北京</option>
@@ -47,7 +48,18 @@
     }
     fidobj=document.getElementById('fid');
     fidobj.onsubmit=function (ev) {
-        alert(1);
+        // alert(1);
+        r=confirm('您确认提交表单吗？');
+        if(!r){
+            return false;
+        }
+    }
+    fidobj.onreset=function (ev) {
+        // alert(1);
+        r=confirm('您确认提交表单吗？');
+        if(!r){
+            return false;
+        }
     }
 
 </script>
