@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS事件绑定及鼠标事件</title>
+    <style>
+        img{
+            cursor: pointer;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="collect.png" id="imgid">
+<br>
+</body>
+<script>
+    //JS特效
+    imgobj=document.getElementById('imgid');
+    //事件触发
+    imgobj.onclick=function () {
+
+        //属性改变
+        this.src='demo.ico';
+        this.style.borderRadius='256px';
+    }
+    //鼠标双击
+    imgobj.ondblclick=function (ev) {
+        alert(1);
+    }
+    //鼠标移入
+    imgobj.onmouseenter=function (ev) {
+        this.src='demo.ico';
+    }
+    //鼠标移出
+    imgobj.onmouseleave=function (ev) {
+        this.src='collect.png';
+    }
+    //鼠标移动
+    document.onmousemove=function (ev) {
+        //获取鼠标的坐标位置
+        x=event.clientX;
+        y=event.clientY;
+        document.title=x+'-'+y;
+        imgobj.style.top=y+'px';
+        imgobj.style.left=x+'px';
+
+    }
+
+</script>
+</html>

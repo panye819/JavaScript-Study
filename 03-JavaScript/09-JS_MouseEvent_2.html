@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS循环单击事件</title>
+    <style>
+        img{
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="demo.ico" id="imgid">
+<br>
+</body>
+<script>
+    //JS特效
+    imgobj=document.getElementById('imgid');
+    //事件触发
+    i=0;
+    imgobj.onclick=function () {
+        if (i%2==0){
+            this.src='collect.png';
+        }else{
+            this.src='demo.ico';
+        }
+        i++;
+        //属性改变
+
+    }
+
+
+</script>
+</html>
