@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DOM_Example_01</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>000001</h1>
+    <h1>000002</h1>
+    <h1>000003</h1>
+    <h1>000004</h1>
+    <h1>000005</h1>
+</body>
+<script>
+    objs=document.getElementsByTagName('h1');
+
+    for(var i=0;i<objs.length;i++){
+        objs[i].onmouseenter=function () {
+            this.style.background='#ccc';
+        }
+        objs[i].onmouseleave=function () {
+            this.style.background='#fff';
+        }
+    }
+</script>
+</html>

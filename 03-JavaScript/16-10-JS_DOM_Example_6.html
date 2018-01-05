@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DOM_Example_6</title>
+    <style>
+        select{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>水果选择</h1>
+<form action="javascript:">
+        <select title="" name="" id="s1" size="2">
+            <option value="选择城市">--选择水果--</option>
+            <option value="">西瓜</option>
+            <option value="">冬瓜</option>
+            <option value="">苹果</option>
+            <option value="">南瓜</option>
+            <option value="">橘子</option>
+        </select>
+    <input type="button" value=">>" id="btn">
+    <input type="button" value="<<" id="sbtn">
+    <select title="" name="" id="s2" size="2">
+    </select>
+</form>
+</body>
+<script>
+    btn=document.getElementById('btn');
+    sbtn=document.getElementById('sbtn');
+    s1=document.getElementById('s1');
+    s2=document.getElementById('s2');
+    opts=s1.options;
+    opt2s=s2.options;
+
+    btn.onclick=function (ev) {
+        idx=s1.selectedIndex;
+        s2.add(opts[idx]);
+    };
+    sbtn.onclick=function (ev) {
+        idx=s2.selectedIndex;
+        s1.add(opt2s[idx]);
+    }
+</script>
+</html>
