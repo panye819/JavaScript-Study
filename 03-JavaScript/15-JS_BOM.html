@@ -6,13 +6,39 @@
     <style>
 
     </style>
+    <link rel="stylesheet" href="css/1366.css" id="cssid">
 </head>
 <body>
-<div>
-    <img src="soldier.png" id="imgid" alt="">
+<div class="main">
+    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
 </div>
 </body>
 <script>
+    // nav=screen.width;
+    // h=screen.height;
+    // aw=screen.availWidth;
+    // ah=screen.availHeight;
+    // alert(nav);
+    // alert(h);
+    // alert(aw);
+    // alert(ah);
+    sw=screen.width;
+    cssobj=document.getElementById('cssid');
+    switch (sw){
+        case 1024:
+            cssobj.href='"css/1024.css';
+            break;
+        case 1280:
+            cssobj.href='"css/1024.css';
+            break;
+        case 1366:
+            cssobj.href='"css/1366.css';
+            break;
+
+    }
+
 
 </script>
 </html>
