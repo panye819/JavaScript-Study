@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS窗口加载</title>
+    <style>
+#top{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+<div id="top">
+    <img src="demo.ico" alt="">
+</div>
+<a name="abc"></a>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+<h1>000000000000000000000000000000000001</h1>
+</body>
+<script>
+    function isChrome() {
+        nu = navigator.userAgent;
+        if(nu.match(/chrome/i)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    topobj=document.getElementById('top');
+
+    window.onscroll=function () {
+        if(isChrome()){
+            st=document.body.scrollTop;
+            document.title=st;
+            if(st>20){
+                topobj.style.display='block';
+            }else{
+                topobj.style.display='none';
+            }
+        }else{
+            st=document.documentElement.scrollTop;
+            document.title=st;
+            if(st>20){
+                topobj.style.display='block';
+            }else{
+                topobj.style.display='none';
+            }
+        }
+    };
+    topobj.onclick=function () {
+        nu = navigator.userAgent;
+        if(isChrome()){
+            document.body.scrollTop=0;
+        }else{
+           document.documentElement.scrollTop=0;
+        }
+    };
+
+</script>
+</html>
