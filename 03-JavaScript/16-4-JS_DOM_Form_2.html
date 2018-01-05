@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DOM_Form</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form action="javascript:">
+    <p>选择城市：</p>
+    <p>
+        <select id="sid">
+            <option value="选择城市">选择城市</option>
+            <option value="北京" order="1">北京</option>
+            <option value="上海" order="5">上海</option>
+            <option value="南京" order="10">南京</option>
+        </select>
+    </p>
+    <p><input type="button" value="ok" id="btn"></p>
+</form>
+</body>
+<script>
+btnobj=document.getElementById('btn');
+sidobj=document.getElementById('sid');
+btnobj.onclick=function () {
+    idx=sidobj.selectedIndex;
+    // alert(idx);
+    // alert(sidobj.value);
+    opts=sidobj.options;
+    alert("你所选的城市是"+opts[idx].value+"; 它的排名是："+opts[idx].getAttribute('order'));
+}
+</script>
+</html>

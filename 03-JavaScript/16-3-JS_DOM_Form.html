@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DOM_Form</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <table width="700px" border="1px" cellspacing="0" id="tid">
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+        </tr>
+    </table>
+    <form action="javascript:">
+        <p>第<input type="text" id="row">行！</p>
+        <p>第<input type="text" id="col">列！</p>
+        <p><input type="button" value="修改" id="commit"></p>
+    </form>
+</body>
+<script>
+tidobj=document.getElementById('tid');
+rowobj=document.getElementById('row');
+colobj=document.getElementById('col');
+commitobj=document.getElementById('commit');
+
+commitobj.onclick=function () {
+    rowval=rowobj.value;
+    colval=colobj.value;
+    set(rowval,colval,'ccc')
+};
+
+function set(i,j,text) {
+    tidobj.rows[i-1].cells[j-1].innerHTML=text;
+
+}
+</script>
+</html>

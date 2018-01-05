@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DOM</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="css/1366.css" id="cssid">
+</head>
+<body>
+    <h1 id="hid">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h1 class="hcls">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+    <h2>bbbbbbbbbbbbbbbbbbbbbbbbbbbbb</h2>
+</body>
+<script>
+hidobjs=document.getElementsByClassName('hcls');
+for(i=0;i<hidobjs.length;i++){
+    hidobjs[i].style.background='#f0f';
+}
+
+h2obj=document.getElementsByTagName('h2');
+for(i=0;i<hidobjs.length;i++){
+    h2obj[i].style.background='#ff0';
+}
+
+
+</script>
+</html>

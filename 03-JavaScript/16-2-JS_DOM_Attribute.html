@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DOM</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 content="linux is very useful!" id="hid">linux is very useful!</h1>
+</body>
+<script>
+    hidobjs=document.getElementById('hid');
+    alert(hidobjs.getAttribute('content'));
+    hidobjs.setAttribute('content','PHP');
+    alert(hidobjs.getAttribute('content'));
+
+
+
+</script>
+</html>
