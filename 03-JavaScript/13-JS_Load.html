@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS窗口加载</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div>
+    <img src="soldier.png" id="imgid" alt="">
+</div>
+</body>
+<script>
+    function show() {
+        w=document.documentElement.clientWidth;
+        if(w>1024){
+            document.body.style.background='#00f';
+        }else if(w>600){
+            document.body.style.background='#0f0'
+        }else {
+            document.body.style.background='#f00';
+        }
+    }
+    show();
+    imgobj=document.getElementById('imgid');
+    imgobj.onerror=function () {
+        this.src='ball.png';
+    }
+    window.onresize=function () {
+       // imgobj.src='demo.ico';
+        // alert(1);
+        show();
+    }
+
+
+</script>
+</html>
