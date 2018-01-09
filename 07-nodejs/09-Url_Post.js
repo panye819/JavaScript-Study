@@ -15,10 +15,10 @@ cs=function (req,res) {
     var body='';
     req.on('data',function (chunk) {
         body +=chunk;
-    })
+    });
     req.on('end',function () {
         body=querystring.parse(body);
-        res.writeHead(200, {'Content-Type': 'text/html; charset=utf8'})
+        res.writeHead(200, {'Content-Type': 'text/html; charset=utf8'});
         if(body.name && body.url){
             res.write("网站名："+body.name);
             res.write("<br>");
