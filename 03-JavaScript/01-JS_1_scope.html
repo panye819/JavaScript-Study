@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+</head>
+<body>
+<div class="img">
+    <h1>aaaaaaaaaaaaaaa</h1>
+    <h1>bbbbbbbbbbbbbbb</h1>
+</div>
+</body>
+<script>
+ /**
+  * 作用域链：
+  *     由多级作用域连续引用形成的链式结果
+  *     掌管着一切变量的使用顺序
+  *         先在局部找，如果没有，就沿着作用域链向父级作用域找
+  * */
+    var a = 10;
+    function fun(a) {
+        a++;
+        console.log("the inner a is "+a);
+   }
+    fun(a);
+    console.log("the out a is   "+a);
+</script>
+</html>

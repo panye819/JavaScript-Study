@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+</body>
+<script>
+   /**
+    * 闭包：
+    *   一种机制，既重用变量，又保护变量不被污染
+    *   如果希望既重用变量，又保护变量不被污染，就要使用闭包。
+    *   使用方法：
+    *       1、外层函数包裹受保护的变量和内层函数
+    *       2、外层函数返回内层函数对象
+    *       3、使用者调用外层函数获得内层函数的对象
+    *   核心问题：
+    *       outer()调用结束后，outer的AO是否释放？
+    *       无法释放，因为外层函数的活动对象被内层函数引用
+    *   闭包的缺点：
+    *       外层函数的活动对象无法释放，比一般函数占用更多内存
+    * */
+    function outer() {
+       var count = 1;
+       return function () {
+           console.log(count++);
+       }
+   }
+    var getNum = outer();
+    for (var i=1;i<5;i++){
+        count = 10;//不会污染前面的变量
+       getNum();
+    }
+</script>
+</html>
