@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS_01</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+<!--调用控制器-->
+<div ng-controller="myCtrl">
+    <!--显示数据-->
+    <p>{{name}}</p>
+</div>
+
+<div ng-controller="myCtrl">
+    <p>{{name}}</p>
+</div>
+<script>
+   //声明一个模块
+    var app = angular.module('myApp',['ng']);
+
+    //声明一个控制器
+    app.controller('myCtrl',function ($scope) {
+        console.log('in myCtrl');
+        //操作模型数据
+        $scope.name = 'web1609';
+
+    });
+
+</script>
+</body>
+</html>
