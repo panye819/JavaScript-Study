@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>vue指令：v-show</h3>
+<div id="app">
+    <h3 v-show="yes">yes</h3>
+    <h3 v-show="no">no</h3>
+    <h3 v-show="age>=25">age:{{age}}</h3>
+    <h3 v-show="name.indexOf('o')>=0">name:{{name}}</h3>
+</div>
+<script src="../vue.min.js"></script>
+<script>
+    //1、创建数据
+    var exampleData={
+        message:"Hello vue",
+        yes:true,
+        no:false,
+        age:28,
+        name:"lion"
+    };
+    //2：创建vue实例
+    new Vue({
+        el:"#app",
+        data:exampleData
+    });
+</script>
+</body>
+</html>
