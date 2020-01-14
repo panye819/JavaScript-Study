@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>vue指令：v-on</h3>
+    <div id="app">
+        <!-- v-on.xx事件名='当触发xx事件时执行的语句' -->
+        <!-- 执行一段js语句:可以使用data中的属性 -->
+        <button v-on:click="count += 1">增加 1</button>
+        <!-- v-on的简写方法 -->
+        <button @click="count += 1">增加 1</button>
+        <!-- 执行一个方法 -->
+        <button @click="add">增加 1</button>
+        <!-- 执行一个方法、这种写法可以传形参 -->
+        <button @click="fn1(count)">执行fn1方法</button>
+        <hr>
+        <!-- 执行一个方法、这种写法可以传形参,特殊的形参$event -->
+        <button @click="fn2($event)">执行fn2方法</button>
+        <hr>
+        <!-- 和v-for结合使用 -->
+        <button @click="fn3(index)" v-for="(item, index) in items">执行fn3方法</button>
+        <!-- v-on修饰符 如 once: 只执行一次 -->
+        <hr>
+        <button @click.once="fn4">只执行一次</button>
+
+        <p>上面的按钮被点击了 {{ count }} 次。</p>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        //1、创建数据
+        new Vue({
+            el: '#app',
+            data: {
+                count: 0,
+                items: ['a', 'b', 'c']
+            },
+            methods: {
+                add: function () {
+                    this.count += 1;
+                },
+                fn1: function (count) {
+                    console.log(count);
+                    console.log('fn1方法被执行');
+                },
+                fn2: function (e) {
+                    console.log(e);
+                    console.log('fn2方法被执行');
+                },
+                fn3: function (index) {
+                    console.log(index);
+                    console.log('fn3方法被执行');
+                },
+                fn4: function () {
+                    console.log('fn4方法被执行了');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>vue-text&v-html</h3>
+<div id="app">
+    <div>
+        <button v-on:click="fn1()">按钮</button>
+        <!-- //v-text:替换标签的全部内容 -->
+       <p v-text="msg">{{count}}</p>
+       <p v-text="str">{{str}}</p>
+       <!-- //v-html:可以识别字符串中的html标签，不推荐使用，存在安全问题，跨站脚本攻击 -->
+       <p v-html="str">{{str}}</p>
+    </div>
+    <p>count is {{count}}</p>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'abc',
+            count:1,
+            str:"<span>span标签</span>"
+            }
+    });
+</script>
+</body>
+</html>

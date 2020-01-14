@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>vue指令：v-model</h3>
+    <div id="app">
+        <!-- 
+        **作用:** 表单元素的绑定
+        特点: **双向数据绑定**
+        - 数据发生变化可以更新到界面
+        - 通过界面可以更改数据
+        - `v-model` 会忽略所有表单元素的 `value`、`checked`、`selected` 特性的初始值
+            而总是将Vue实例的数据作为数据来源。应该在 `data`选项中声明初始值。 
+        -->
+        <p>{{message}}</p>
+        <input type='text' v-model='message'>
+        <hr>
+        <!-- v-model其实是语法糖,它是下面这种写法的简写 -->
+        <input v-bind:value='message' v-on:input='message = $event.target.value' />
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'message默认值'
+            }
+        })
+    </script>
+</body>
+</html>

@@ -7,14 +7,9 @@
 <body>
 <h3>vue指令：v-else</h3>
 <div id="app">
-    {{message}}
-    <h3 v-if="yes">yes</h3>
-    <h3 v-if="no">no</h3>
-    <h3 v-if="age>25">age:{{age}}</h3>
-    <hr/>
-    <h3 v-else>name:{{name}}</h3>
-    <h3 v-if="name.indexOf('w')>=0">name:{{name}}</h3>
-    <h3 v-else>没有找到指定字段</h3>
+   <!-- data中的属性值会替换为标签的属性值 -->
+   <img v-bind:src="src" />
+   <p v-bind:id="idValue">内容</p>
 </div>
 <script src="../js/vue.js"></script>
 <script>
@@ -26,8 +21,11 @@
         name:"lion"
     };
     new Vue({
-        el:"#app",
-        data:exampleData
+        el: '#app',
+            data: {
+                src: './logo.png',
+                idValue: 'b'
+            }
     });
 </script>
 </body>

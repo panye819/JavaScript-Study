@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>vue指令：v-for</h3>
+    <div id="app">
+        <!-- v-for作用:列表渲染,当遇到相似的标签结构时,就用v-for去渲染
+				v-for="元素 in 容器(数组和对象)"
+				v-for="数组中的元素 in data中的数组名"
+				v-for="对象中的属性值 in data中的对象名"
+			-->
+        <!-- 数组 -->
+        <p v-for="item in list">{{item}}</p>
+        <hr>
+        <p v-for="(item,index) in list">{{item}}----{{index}}</p>
+        <!-- (v,i) in 数组
+				v:数组中的每个元素
+				i:数组中元素的下标
+			-->
+        <hr>
+        <!-- 对象 -->
+        <!-- (v,k,i)in 对象
+				v:值
+				k:键
+				i:对象中每对key-value的索引 从0开始
+				注意: v,k,i是参数名,见名知意即可!
+			-->
+        <p v-for="value in per">{{value}}</p>
+        <hr>
+        <p v-for="(value,key) in per">{{value}}----{{key}}</p>
+        <hr>
+        <p v-for="(value,key,i) in per">{{value}}----{{key}}--{{i}}</p>
+
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                list: ['a', 'b', 'c'],
+                per: {
+                    name: '老王',
+                    age: 38,
+                    gender: '男'
+                }
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

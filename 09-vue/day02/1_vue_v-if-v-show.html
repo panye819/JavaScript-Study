@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>vue指令：v-if v-show</h3>
+    <div id="app">
+        <!-- 作用:根据表达式的bool值进行判断是否渲染该元素 -->
+        <!-- 如果isShow的值是true ,就显示p标签 -->
+        <p v-if="isShow">我是p标签中的内容1</p>
+        <p v-show="isShow">我是p标签中的内容2</p>
+        <!-- 如果标签显示与隐藏切换频繁, 就使用v-show 
+          v-show本质是通过修改标签的display值
+      -->
+        {{message}}
+        <h3 v-if="yes">yes</h3>
+        <h3 v-if="no">no</h3>
+        <h3 v-if="age>28">age:{{age}}</h3>
+        <h3 v-if="name.indexOf('o')>=0">name:{{name}}</h3>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: "Hello vue",
+                yes: true,
+                no: false,
+                age: 28,
+                name: "lion",
+                isShow: true
+            }
+        });
+    </script>
+</body>
+
+</html>
