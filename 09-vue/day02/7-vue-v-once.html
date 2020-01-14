@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>vue指令：v-once</h3>
+
+    <!-- **解决的问题:**只渲染元素和组件一次，随后的渲染，
+        使用了此指令的元素/组件及其所有的子节点，都会当作静态内容并跳过，
+        这可以用于优化更新性能。  -->
+    <!-- 
+    当添加v-once的指令所对应的元素, 其数据发生改变时,并不会再一次进行渲染
+    v-cloak和v-once 不需要表达式, 直接将指令写在开始标签中即可 -->
+
+        <div id="app">
+            <p>{{message}}</p>
+            <p v-once>{{message}}</p>
+            <input type="text" v-model="message">
+        </div>
+        <script src="../js/vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    message: '我是data中message的属性的值'
+                }
+            });
+        </script>
+</body>
+</html>
