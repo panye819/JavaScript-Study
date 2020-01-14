@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>vue-data</h3>
+<div id="app">
+    <div>
+        {{msg}}
+        <br>
+        {{count}}
+    </div>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+    /**
+     *data作用：
+     *  1、data的值可以是一个对象
+     *  2、data中的数据：可以通过Vue实例对象.属性名（vm.msg）去访问数据
+     *  3、访问数据 可以通过vm.$data.msg访问数据
+     *  特点：响应式数据（当数据变化时，视图中用数据的位置会自动发生变化）
+     *
+     * */
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'abc',
+            count:1
+        }
+    })
+
+</script>
+</body>
+</html>
