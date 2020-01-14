@@ -1,0 +1,27 @@
+{
+    "brands":[{
+        "name":"TCL",
+        "date":"Tue Jan 14 2020 15:41:23",
+        "id":1
+    },{
+        "name":"Apple",
+        "date":"Tue Jan 14 2020 15:41:23",
+        "id":2
+    },{
+        "name":"BM",
+        "date":"Tue Jan 14 2020 15:41:23",
+        "id":3
+    },{
+        "name":"Sony",
+        "date":"Tue Jan 14 2020 15:41:23",
+        "id":4
+    },{
+        "name":"Huawei",
+        "date":"Tue Jan 14 2020 15:41:23",
+        "id":5
+    },{
+        "name":"Mi",
+        "date":"Tue Jan 14 2020 15:41:23",
+        "id":6
+    }]
+}
