@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>计算属性</h3>
+    <hr>
+
+    <!--如果逻辑代码很复杂, 直接把表达式写在{{}}中不合适
+此时, 就用到了计算属性-->
+        <div id="app">
+            <p>Original message: "{{message}}"</p>
+            <p>Computed reversed message: "{{reversedMessage}}"</p>
+        </div>
+        <script src="../js/vue.js"></script>
+        <script>
+            let vm = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello'
+                },
+                computed:{
+                    reversedMessage:function(){
+                        return this.message.split('').reverse().join('')
+                    }
+                }
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>计算属性</h3>
+    <hr>
+
+    <!--- 
+        computed:
+            - 一旦data中的数据发生**变化**,就会触发计算属性的方法
+            - 会将data中属性的结果进行缓存,对比缓存中的结果是否发生变化
+        methods: 一调用就会触发, 和数据的变化与否无关
+    -->
+
+    <div id="app">
+        <p>methods: "{{fn1()}}"</p>
+        <p>methods: "{{fn1()}}"</p>
+        <p>methods: "{{fn1()}}"</p>
+        <hr>
+        <p>computed: "{{fn2}}"</p>
+        <p>computed: "{{fn2}}"</p>
+        <p>computed: "{{fn2}}"</p>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello'
+            },
+            /*  计算属性的方法
+               当计算属性fn2没有依赖data中的数据时，第一次使用计算属性时会把第一次
+              的结果进行缓存，后面无论再使用几次计算属性，都会去第一次的结果进行查找 
+              计算属性使用时，不加()
+              */
+            computed: {
+                fn2() {
+                    console.log('fn2------');
+                    return new Date();
+                }
+            },
+            // methods方法，每调用一次就触发一次       
+            methods: {
+                fn1() {
+                    console.log('fn1------');
+                    return new Date();
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>
